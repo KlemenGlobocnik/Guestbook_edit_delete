@@ -1,0 +1,12 @@
+{% extends "baseguestbook.html" %}
+
+{% block title %}Vnosna stran{% endblock title %}
+
+{% block specifika %}
+
+<h1>The following data have been uploaded:</h1>
+<p>Name: {{ guestbook.ime }}</p>
+<p>Surname: {{ guestbook.priimek }}</p>
+<p>Email: {{ guestbook.email }}</p>
+<p>Massage: {{ guestbook.sporocilo }}</p>
+{% endblock specifika %}

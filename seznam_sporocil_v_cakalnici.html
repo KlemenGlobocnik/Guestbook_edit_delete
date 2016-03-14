@@ -1,0 +1,12 @@
+{% extends "baseguestbook.html" %}
+
+{% block title %}Seznam sporocil{% endblock title %}
+
+{% block specifika %}
+            <h1>List of deleted guests</h1>
+    
+            {% for sporocilo in seznam %}
+            <p><a href="/sporocilo1/{{ sporocilo.key.id() }}">{{ sporocilo.ime }}, {{ sporocilo.priimek }}, {{ sporocilo.email }}, {{ sporocilo.sporocilo }}, {{ sporocilo.nastanek }}, {{ sporocilo.izbrisan }}, {{ sporocilo.key.id() }}</a></p>
+            {% endfor %}
+
+{% endblock specifika %}

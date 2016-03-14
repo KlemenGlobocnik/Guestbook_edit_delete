@@ -1,0 +1,18 @@
+{% extends "baseguestbook.html" %}
+
+{% block title %}Posamezno sporocilo{% endblock title %}
+
+{% block specifika %}
+    <h1>Podatki sporočila</h1>
+
+    <p>Name: {{ sporocilo.ime }}</p>
+    <p>Surname: {{ sporocilo.priimek }}</p>
+    <p>Email: {{ sporocilo.email }}</p>
+    <p>Massage: {{ sporocilo.sporocilo }}</p>
+    <form action="/sporocilo1/{{ sporocilo.key.id() }}/dokoncnoizbrisi" method="post">
+    <button type="submit">Dokoncno izbrisi</button>
+    </form>
+    <form action="/sporocilo1/{{ sporocilo.key.id() }}/povrni" method="post">
+    <button type="submit">Return</button>
+
+{% endblock specifika %}

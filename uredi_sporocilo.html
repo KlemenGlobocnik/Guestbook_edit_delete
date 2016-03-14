@@ -1,0 +1,22 @@
+{% extends "baseguestbook.html" %}
+
+{% block title %}Posamezno sporocilo{% endblock title %}
+
+{% block specifika %}
+    <form action="/sporocilo/{{ sporocilo.key.id() }}/uredi" method="post">
+            Name:<br>
+            <input name="ime" value="{{ sporocilo.ime }}">
+            <br>
+            Surname:<br>
+            <input name="priimek" value="{{ sporocilo.priimek }}">
+            <br>
+            Email:<br>
+            <input name="email" value="{{ sporocilo.email }}">
+            <br>
+            Massage:<br>
+            <input name="sporocilo" value="{{ sporocilo.sporocilo }}">
+            <br>
+            <button type="submit" class="myButton">OK</button>
+    </form>
+
+{% endblock specifika %}

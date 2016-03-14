@@ -1,0 +1,12 @@
+{% extends "baseguestbook.html" %}
+
+{% block title %}Individual guest{% endblock title %}
+
+{% block specifika %}
+<p></p>
+        <form action="/sporocilo/{{ sporocilo.key.id() }}/izbrisi" method="post">
+                <button type="submit" class="myButton">If you would like to delete the guest, please press the button</button>
+        </form>
+
+{% endblock specifika %}
+

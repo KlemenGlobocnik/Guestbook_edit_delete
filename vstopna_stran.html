@@ -1,0 +1,22 @@
+{% extends "baseguestbook.html" %}
+
+{% block title %}Vnosna stran{% endblock title %}
+
+{% block specifika %}
+
+<form action="/rezultat" method="post">
+        Name:<br>
+        <input name="ime">
+        <br>
+        Surname:<br>
+        <input name="priimek">
+        <br>
+        Email:<br>
+        <input name="email">
+        <br>
+        Massage:<br>
+        <input name="sporocilo" required>
+        <br>
+        <button type="submit" class="myButton">OK</button>
+</form>
+{% endblock specifika %}
